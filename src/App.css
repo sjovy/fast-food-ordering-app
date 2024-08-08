@@ -1,38 +1,141 @@
+/* Default light theme */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: white;
+  color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Dark theme */
+.App.dark {
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Ensure buttons and other elements are styled appropriately for both themes */
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App.dark .btn-secondary {
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.App.dark .btn-danger {
+  background-color: #b02a37;
+  border-color: #b02a37;
+}
+
+/* Header styling */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 200px; /* Adjusted size */
+  height: 200px; /* Adjusted size */
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+/* Menu styling */
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.App.dark .btn-primary {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Order Summary styling */
+.order-summary {
+  width: 150%; /* Increased width */
+  margin-top: 20px;
+  margin-left: -100px; /* Move to the left */
+}
+
+.App.dark .order-summary {
+  background-color: #444;
+  border: 1px solid #555;
+}
+
+.order-summary h2 {
+  font-size: 1.5rem;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-controls button {
+  margin: 0 5px;
+}
+
+h2.mt-3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+/* Theme Toggle styling */
+.theme-toggle {
+  align-self: flex-start;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
