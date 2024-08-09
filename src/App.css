@@ -102,11 +102,22 @@
   border-color: #0056b3;
 }
 
+/* Dark mode styles for menu items */
+.App.dark .card {
+  background-color: #444;
+  border: 1px solid #555;
+}
+
+.App.dark .card-title,
+.App.dark .card-text {
+  color: white;
+}
+
 /* Order Summary styling */
 .order-summary {
   width: 150%; /* Increased width */
   margin-top: 20px;
-  margin-left: -100px; /* Move to the left */
+  margin-left: -100px; /* Move further to the left */
 }
 
 .App.dark .order-summary {
